@@ -19,3 +19,7 @@ img {
     background-image: none;
   }
 }
+
+.active-link-class {
+  color: #6495ed;
+}

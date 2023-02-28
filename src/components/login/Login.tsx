@@ -6,6 +6,7 @@ import { useFormik } from "formik";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { basicSchema } from "../schemas";
 import "./login.css";
+import { NavLink } from "react-router-dom";
 
 const onSubmit = () => {
   console.log("Submitted");
@@ -86,7 +87,11 @@ export const Login = () => {
       </div>
       <div className='btn__container'>
         <Button className='btn-pink' value='Login'/>
-        <Button className='btn-white' value='Create account' />
+        <NavLink
+        className={({ isActive }) => (isActive ? "active-link-class" : "")}
+        to="/signUp"
+      > 
+        <Button className='btn-white' value='Create account' />  </NavLink>
       </div>
       </form>
       <div className='bottom-text'>

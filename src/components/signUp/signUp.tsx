@@ -5,6 +5,7 @@ import { Input } from "../input";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { ErrorMessage } from "../error";
 import "./signUp.css";
+import { NavLink } from "react-router-dom";
 
 type Errors = Record<string, string>;
 
@@ -215,7 +216,11 @@ export const SignUp = () => {
           value='Create Account'
           onClick={errorHandler}
         />
-        <Button className='btn-white' value='Login' />
+        <NavLink
+        className={({ isActive }) => (isActive ? "active-link-class" : "")}
+        to="/login"
+      > 
+        <Button className='btn-white' value='Login' />  </NavLink>
       </div>
       <div className='bottom-text'>
         Or login with
