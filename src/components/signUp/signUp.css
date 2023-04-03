@@ -1,0 +1,11 @@
+.input__sign-up {
+  border: dashed blue 1px;
+  background-color: #fbefd0;
+  color: #000080;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  height: 40px;
+  padding-left: 7px;
+  font-size: 15px;
+}
